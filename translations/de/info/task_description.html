@@ -1,0 +1,81 @@
+<!-- Describe task in general -->
+
+<p>
+    Nehmen wir an, Sie erhalten ein{% if is_js %}n Array von Arrays{% else %} Liste von Listen{% endif %} von positiven/negativen Integer-/Float-Zahlen, zum Beispiel - <b>[[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]</b>. Es ist immer korrekt gefüllt: hat mindestens ein nicht leeres inneres {% if is_js %}Array{% else %}Liste{% endif %}.
+</p>
+<p>
+    Wenn Sie es als einzelnes Objekt ausgeben, erhalten Sie
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}No.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+    oder Zeile für Zeile:
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}No.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[1, 2, 10, 150]
+[10, 2, 1000, 2]
+[1, 120, 1, 1000]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+</p>
+<p>
+    Ihre Funktion sollte etwas aus beiden Ansichten und verbessert zurückgeben: eine <b>single string</b> (mehrzeilig, wenn mehr als eine innere {% if is_js %}array{% else %}list{% endif %}), wobei die Zahlen in den Spalten rechtsbündig sein sollten. Zwischen der längsten Zahl in einer Spalte inkl. Minus (falls vorhanden) und dem vorherigen Komma in einer Zeile muss genau ein Leerzeichen stehen. Alle Zeilen der gleichen Länge, die in den Klammern {% if is_js %}array{% else %}list{% endif %} zusammengefasst sind.
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}Yes.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[[ 1,   2,   10,  150],
+ [10,   2, 1000,    2],
+ [ 1, 120,    1, 1000]]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+</p>
+<p>
+    <i>
+        Ist es jetzt nicht schön 😍?
+    </i>
+    
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> {% if is_js %}Array von Arrays{% else %}Liste von Listen{% endif %} von Zahlen.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Zeichenkette. 
+</p>
+
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
