@@ -1,0 +1,81 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    Załóżmy, że otrzymują Państwo tablicę{% if is_js %}n tablic{% else %} list list{% endif %} dodatnich/ujemnych liczb całkowitych/ zmiennoprzecinkowych, na przykład - <b>[[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]</b>. Jest ona zawsze poprawnie wypełniona: ma co najmniej jedną niepustą wewnętrzną {% if is_js %}tablicę{% else %}listę{% endif %}.
+</p>
+<p>
+    Po wydrukowaniu go jako pojedynczego obiektu, otrzymają Państwo
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}No.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+    lub wiersz po wierszu:
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}No.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[1, 2, 10, 150]
+[10, 2, 1000, 2]
+[1, 120, 1, 1000]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+</p>
+<p>
+    Państwa funkcja powinna zwracać coś z obu widoków i ulepszonego: <b>single string</b> (wielowierszowy, jeśli więcej niż jeden wewnętrzny {% if is_js %}tablica{% else %}lista{% endif %}), gdzie liczby w kolumnach powinny być wyrównane do prawej. Pomiędzy najdłuższą liczbą w kolumnie włącznie z minusem (jeśli występuje) a poprzednim przecinkiem w wierszu musi być dokładnie jeden biały znak. Wszystkie wiersze tej samej długości powinny być ujęte w nawiasy {% if is_js %}array{% else %}list{% endif %}.
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}Yes.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[[ 1,   2,   10,  150],
+ [10,   2, 1000,    2],
+ [ 1, 120,    1, 1000]]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+</p>
+<p>
+    <i>
+        Czyż teraz nie jest pięknie 😍?
+    </i>
+    
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Dane wejściowe:</strong> {% if is_js %}Tablica tablic{% else %}Lista list{% endif %} liczb.
+</p>
+
+<p>
+   <strong>Wyjście:</strong> String. 
+</p>
+
+
+<p>
+    <strong>Przykłady:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
