@@ -1,0 +1,81 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p>
+    假设给你一个{% if is_js %}n 数组的数组{% else %} 列表的列表{% endif %} 正/负整数/浮点数，例如 -<b>[[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]</b> 。它总是被正确填充：至少有一个非空的内部{% if is_js %}数组{% else %}列表{% endif %} 。
+</p>
+<p>
+    将其打印为单个对象时，您会收到
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}No.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+    或逐行打印：
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}No.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[1, 2, 10, 150]
+[10, 2, 1000, 2]
+[1, 120, 1, 1000]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+</p>
+<p>
+    您的函数应同时返回视图和改进后的内容：<b>single string</b> （多行，如果有多个内{% if is_js %}数组{% else %}列表{% endif %} ），其中各列的数字应右移。列中最长的数字（包括减号（如果有））与行中前一个逗号之间必须有一个空格。所有长度相同的行，用{% if is_js %}array{% else %}list{% endif %} 括弧包起来。
+    <table>
+        <tr>
+            <td>
+                <img  title="example" src="{{MEDIA}}Yes.png" alt="example" style="max-height: 100px"/>
+            </td>
+            <td>
+                <pre>
+[[ 1,   2,   10,  150],
+ [10,   2, 1000,    2],
+ [ 1, 120,    1, 1000]]
+                </pre>
+            </td>
+        </tr>
+        </td>
+    </table>
+</p>
+<p>
+    <i>
+        现在是不是很漂亮😍？
+    </i>
+    
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入：</strong> {% if is_js %}数组的数组{% else %}列表的列表{% endif %} 数字的数字。
+</p>
+
+<p>
+   <strong>输出：</strong>字符串。 
+</p>
+
+
+<p>
+    <strong>例子</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
